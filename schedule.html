@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+/*Copyright 2025 Jason Armstrong
+All rights reserved.
+
+This project and its source code may not be copied, modified, distributed, or used in any form without the express written permission of the author.
+
+Unauthorized use is strictly prohibited and may result in legal consequences.
+
+For more information contact jpa78548@email.vccs.edu
+*/
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Maestro - My Schedule</title>
+    <link rel = "stylesheet" href="schedule.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Mason Maestro Schedule</h1>
+
+        <div class="day-navigation">
+            <button class="nav-button" id="prevDayBtn">&lt;</button>
+            <span class="current-day-display" id="currentDayDisplay">Weekly Schedule</span>
+            <button class="nav-button" id="nextDayBtn">&gt;</button>
+        </div>
+
+        <div class="schedule-grid" id="weeklyScheduleGrid">
+            <!-- Grid Headers (Days of the week) -->
+            <div class="schedule-header">Time</div>
+            <div class="schedule-header">Monday</div>
+            <div class="schedule-header">Tuesday</div>
+            <div class="schedule-header">Wednesday</div>
+            <div class="schedule-header">Thursday</div>
+            <div class="schedule-header">Friday</div>
+
+            <!-- Time Labels and Schedule Cells will be populated by JavaScript -->
+        </div>
+
+        <div class="class-list-section">
+            <h2>All Classes in My Schedule</h2>
+            <ul class="returned-class-list" id="returnedClassList">
+                <!-- List of all classes will be populated by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Custom Modal for Messages (re-used) -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle"></h3>
+            <p id="modalMessage"></p>
+            <button id="modalCloseBtn">OK</button>
+        </div>
+    </div>
+    <script src ="scheduler.js" type = "module"></script>
+    <script src = "schedule.js" type = "module"></script>
+       
+</body>
+</html>

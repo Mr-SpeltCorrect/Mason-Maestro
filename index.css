@@ -1,0 +1,182 @@
+/*Copyright 2025 Jason Armstrong
+All rights reserved.
+
+This project and its source code may not be copied, modified, distributed, or used in any form without the express written permission of the author.
+
+Unauthorized use is strictly prohibited and may result in legal consequences.
+
+For more information contact jpa78548@email.vccs.edu
+*/
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0fdf4; /* Very light green */
+            color: #1c3b24; /* Dark green text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 35px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(28, 59, 36, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2e7d32; /* Medium green */
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end; /* Aligns items to the bottom */
+            margin-bottom: 25px;
+        }
+
+        .input-item {
+            flex: 1; /* Distributes space evenly */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns labels to the start */
+        }
+
+        .input-item label {
+            font-size: 0.9em;
+            color: #388e3c; /* A slightly lighter green for labels */
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .input-group select,
+        .input-group input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #a5d6a7; /* Light green border */
+            border-radius: 8px;
+            background-color: #e8f5e9; /* Very light green background for inputs */
+            color: #1c3b24;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            -webkit-appearance: none; /* Remove default arrow for selects on WebKit */
+            -moz-appearance: none;    /* Remove default arrow for selects on Mozilla */
+            appearance: none;         /* Remove default arrow for selects */
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%232e7d32%22%20d%3D%22M287%2C197.3L159.9%2C69.9c-2.4-2.4-6.2-2.4-8.6%2C0L5.4%2C197.3c-2.4%2C2.4-2.4%2C6.2%2C0%2C8.6l12.7%2C12.7c2.4%2C2.4%2C6.2%2C2.4%2C8.6%2C0l113.8-113.7c2.4-2.4%2C6.2-2.4%2C8.6%2C0l113.8%2C113.7c2.4%2C2.4%2C6.2%2C2.4%2C8.6%2C0l12.7-12.7C289.4%2C203.5%2C289.4%2C199.7%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow for dropdowns */
+            background-repeat: no-repeat;
+            background-position: right 12px top 50%;
+            background-size: 12px auto;
+        }
+
+        .input-group select:focus,
+        .input-group input[type="text"]:focus {
+            outline: none;
+            border-color: #2e7d32; /* Darker green on focus */
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+        }
+
+        .add-button {
+            background-color: #4caf50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 50%; /* Makes it a circle */
+            width: 40px;
+            height: 40px;
+            font-size: 1.8em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            flex-shrink: 0; /* Prevents it from shrinking */
+            margin-bottom: 0px; /* Align with input bottoms */
+            position: relative; /* For precise vertical alignment */
+            top: 4px; /* Adjust as needed for perfect alignment */
+        }
+
+        .add-button:hover {
+            background-color: #388e3c; /* Darker green on hover */
+            transform: scale(1.05);
+        }
+
+        .query-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            border-top: 1px dashed #a5d6a7; /* Dashed line for separation */
+            padding-top: 20px;
+            min-height: 50px; /* Give it some initial height */
+            text-align: left;
+        }
+
+        .query-list li {
+            background-color: #e8f5e9; /* Lightest green for list items */
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95em;
+            color: #2e7d32;
+        }
+
+        .query-list li .remove-item {
+            color: #ef5350; /* Red for remove icon */
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.2s ease;
+        }
+
+        .query-list li .remove-item:hover {
+            color: #d32f2f; /* Darker red on hover */
+        }
+
+        .search-button {
+            background-color: #2e7d32; /* Medium green, primary action */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(28, 59, 36, 0.2);
+        }
+
+        .search-button:hover {
+            background-color: #1b5e20; /* Darker green on hover */
+            transform: translateY(-2px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .input-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .add-button {
+                width: 100%;
+                border-radius: 8px;
+                margin-top: 15px;
+                top: 0; /* Reset top adjustment */
+            }
+            .input-item {
+                flex: none; /* Disable flex-grow */
+                width: 100%;
+            }
+        }

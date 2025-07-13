@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+/*
+Copyright 2025 Jason Armstrong
+All rights reserved.
+
+This project and its source code may not be copied, modified, distributed, or used in any form without the express written permission of the author.
+
+Unauthorized use is strictly prohibited and may result in legal consequences.
+
+For more information contact jpa78548@email.vccs.edu
+*/
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Maestro</title>
+    <link rel = "stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mason Maestro</h1>
+
+        <div class="input-group">
+            <div class="input-item">
+                <label for="courseSubject">Course Subject</label>
+                <select id="courseSubject">
+                    <option value="">Select Subject</option>
+                    <option value="ACCT">Accounting</option>
+                    <option value="BIOL">Biology</option>
+                    </select>
+            </div>
+
+            <div class="input-item">
+                <label for="courseNumber">Course Number</label>
+                <input type="text" id="courseNumber" placeholder="e.g. 101, 203">
+            </div>
+
+            <div class="input-item">
+                <label for="courseType">Course Type</label>
+                <select id="courseType">
+                    <option value="">Select Type</option>
+                    <option value="Lecture">Lecture</option>
+                    <option value="Lab">Laboratory</option>
+                    <option value="Recitation">Recitation</option>
+                    <option value="Seminar">Seminar</option>
+                    </select>
+            </div>
+
+            <button class="add-button" id="addQueryBtn">+</button>
+        </div>
+
+        <ul class="query-list" id="queryList">
+            </ul>
+
+        
+        <button class="search-button" id="searchBtn">
+             Search for My Schedule
+        </button>
+        
+
+    </div>
+    <script src="index.js" type = "module"></script>
+    <script src ="scheduler.js" type = "module"></script>
+</body>
+</html>
